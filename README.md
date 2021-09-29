@@ -2,9 +2,12 @@
 Understanding, bypass and securing of Json Web Tokens (JWT)
 
 * ### Prerequisites
+Json Web Tokens are 
 
-* ### X
+* ### Absusing 'none' algorithm
 
-* ### XX
+* ### Signature stripping attack
 
-* ### XXX
+* ### Brute force HS256 secret key
+
+* ### Substitution attack to RS256
