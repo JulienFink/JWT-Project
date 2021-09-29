@@ -26,7 +26,10 @@ The signature is crafted using a secret - "Azerty123" in our case.
 
 The "header", "payload" and "signature" parts are then encoded using base64url.
 
-Complete JWT : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiSnVsaWVuRmluayIsImlhdCI6MTUzMzc3NzQzOH0.KJFzGjs_75Q56mY9QXqpEKU-wE2o3ufF3ZxfIUaexwI
+Complete JWT :
+```diff
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiSnVsaWVuRmluayIsImlhdCI6MTUzMzc3NzQzOH0.KJFzGjs_75Q56mY9QXqpEKU-wE2o3ufF3ZxfIUaexwI
+```
 
 Useful links for an overall understanding :
 <br/> https://fr.wikipedia.org/wiki/JSON_Web_Token
@@ -38,13 +41,20 @@ Useful links for an overall understanding :
 Let us assume you don't have an account on a website, you don't want to create one and you decide to log in as a guest.
 A JWT is assigned to your newly created session:
 
+```diff
+eyJ0eXAiOiJKV1QiLCJhbGciOiJub25lIn0.eyJ1c2VybmFtZSI6Imd1ZXN0In0.
+{"typ":"JWT","alg":"none"}.{"username":"guest"}.
+```
+
 eyJ0eXAiOiJKV1QiLCJhbGciOiJub25lIn0.eyJ1c2VybmFtZSI6Imd1ZXN0In0.
 <br/> {"typ":"JWT","alg":"none"}.{"username":"guest"}.
 
 What would happen if we decided to change the value of the username to "admin" ? We would get a new valid JWT and thus get access to the admin section.
 
+```diff
 eyJ0eXAiOiJKV1QiLCJhbGciOiJub25lIn0.eyJ1c2VybmFtZSI6ImFkbWluIn0.
-<br/> {"typ":"JWT","alg":"none"}.{"username":"admin"}.
+{"typ":"JWT","alg":"none"}.{"username":"admin"}.
+```
 
 To avoid this type of Pr0bL3m, do not use 'none' algorithm.
 
