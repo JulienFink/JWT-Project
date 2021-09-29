@@ -20,7 +20,7 @@ The "header", "payload" and "signature" parts are then encoded using base64url.
 
 Complete JWT : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiSnVsaWVuRmluayIsImlhdCI6MTUzMzc3NzQzOH0.KJFzGjs_75Q56mY9QXqpEKU-wE2o3ufF3ZxfIUaexwI
 
-Useful links :
+Useful links for an overall understanding :
 <br/> https://fr.wikipedia.org/wiki/JSON_Web_Token
 <br/> https://jwt.io/
 <br/> https://www.base64url.com/
