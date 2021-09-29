@@ -31,12 +31,12 @@ Let us assume you don't have an account on a website, you don't want to create o
 A JWT is assigned to your "guest" session:
 
 eyJ0eXAiOiJKV1QiLCJhbGciOiJub25lIn0.eyJ1c2VybmFtZSI6Imd1ZXN0In0.
-{"typ":"JWT","alg":"none"}.{"username":"guest"}.
+<br/> {"typ":"JWT","alg":"none"}.{"username":"guest"}.
 
 What would happen if we decided to change the value of username to "admin" ? We would get a new valid JWT and thus access the admin section.
 
 eyJ0eXAiOiJKV1QiLCJhbGciOiJub25lIn0.eyJ1c2VybmFtZSI6ImFkbWluIn0.
-{"typ":"JWT","alg":"none"}.{"username":"admin"}.
+<br/> {"typ":"JWT","alg":"none"}.{"username":"admin"}.
 
 * ### Signature stripping attack
 
