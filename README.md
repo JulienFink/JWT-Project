@@ -31,7 +31,7 @@ Let us assume you don't have an account on a website, you don't want to create o
 A JWT is assigned to your "guest" session:
 
 eyJ0eXAiOiJKV1QiLCJhbGciOiJub25lIn0.eyJ1c2VybmFtZSI6Imd1ZXN0In0.
-     {"typ":"JWT","alg":"none"}        {"username":"guest"} 
+<br/>     {"typ":"JWT","alg":"none"}        {"username":"guest"} 
 
 eyJ0eXAiOiJKV1QiLCJhbGciOiJub25lIn0.eyJ1c2VybmFtZSI6ImFkbWluIn0.
 
