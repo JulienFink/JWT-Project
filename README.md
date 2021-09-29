@@ -56,7 +56,9 @@ eyJ0eXAiOiJKV1QiLCJhbGciOiJub25lIn0.eyJ1c2VybmFtZSI6ImFkbWluIn0.
 {"typ":"JWT","alg":"none"}.{"username":"admin"}.
 ```
 
-To avoid this type of Pr0bL3m, do not use 'none' algorithm.
+```diff
++ To avoid this type of Pr0bL3m, do not use 'none' algorithm.
+```
 
 * ### Signature stripping attack
 
