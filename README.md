@@ -42,6 +42,7 @@ eyJ0eXAiOiJKV1QiLCJhbGciOiJub25lIn0.eyJ1c2VybmFtZSI6ImFkbWluIn0.
 
 
 ![JWT_intro](https://user-images.githubusercontent.com/64968597/135340593-9964d298-be74-4964-bdd0-c8674d383131.JPG)
+https://www.root-me.org/fr/Challenges/Web-Serveur/JSON-Web-Token-JWT-Introduction
 
 * ### Brute forcing HS256 secret key
 
