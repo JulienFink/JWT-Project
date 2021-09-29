@@ -80,6 +80,12 @@ Works !
 ![JWT blur](https://user-images.githubusercontent.com/64968597/135341742-d1aae0d8-deaa-4a66-9202-85529e982067.png)
 <br/> https://www.root-me.org/fr/Challenges/Web-Serveur/JSON-Web-Token-JWT-Introduction
 
+```diff
++ To avoid this type of Pr0bL3m, use a whitelist of allowed algorithms.
++ ['HS256']
+- ['None']
+```
+
 To avoid this type of Pr0bL3m, use a whitelist of allowed algorithms. ['HS256', ~~'None'~~]
 
 * ### Brute forcing HS256 secret key
