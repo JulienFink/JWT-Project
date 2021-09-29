@@ -33,10 +33,12 @@ A JWT is assigned to your newly created session:
 eyJ0eXAiOiJKV1QiLCJhbGciOiJub25lIn0.eyJ1c2VybmFtZSI6Imd1ZXN0In0.
 <br/> {"typ":"JWT","alg":"none"}.{"username":"guest"}.
 
-What would happen if we decided to change the value of username to "admin" ? We would get a new valid JWT and thus get access to the admin section.
+What would happen if we decided to change the value of the username to "admin" ? We would get a new valid JWT and thus get access to the admin section.
 
 eyJ0eXAiOiJKV1QiLCJhbGciOiJub25lIn0.eyJ1c2VybmFtZSI6ImFkbWluIn0.
 <br/> {"typ":"JWT","alg":"none"}.{"username":"admin"}.
+
+To avoid this type of Pr0bl3m, do not use 'none' algorithm.
 
 * ### Signature stripping attack
 
