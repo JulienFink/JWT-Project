@@ -9,7 +9,7 @@ A token consists of three parts:
 - A payload, which represents the information embedded in the token.
 - A digital signature.
 
-Example
+§Example:§
 Header: {"typ": "jwt", "alg": "HS512"}
 Payload: {"name":"JulienFink", "iat":1533777438}
 Signature: {cAOIAifu3fykvhkHpbuhbvtH807-Z2rI1FS3vX1XMjE}
