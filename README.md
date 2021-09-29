@@ -9,16 +9,19 @@ A token consists of three parts:
 - A payload, which represents the information embedded in the token.
 - A digital signature.
 
-§Example:§
-Header: {"typ": "jwt", "alg": "HS512"}
+Example:
+Header: {"alg": "HS256", "typ": "JWT"}
 Payload: {"name":"JulienFink", "iat":1533777438}
-Signature: {cAOIAifu3fykvhkHpbuhbvtH807-Z2rI1FS3vX1XMjE}
+Signature: 4V7KzBemrVji_kCyzGO3lQMZlBuVxryF3YhmMIr4kWI (crafted with a secret - "Azerty123" in our case)
 
-The "header" and "payload" parts are encoded using base64url.
+The "header", "payload" and "signature" parts are then encoded using base64url.
 
-Complete JWT: eyJ0eXAiOiAiand0IiwgImFsZyI6ICJIUzUxMiJ9.eyJuYW1lIjoiSnVsaWVuRmluayIsICJpYXQiOjE1MzM3Nzc0Mzh9.cAOIAifu3fykvhkHpbuhbvtH807-Z2rI1FS3vX1XMjE
+Complete JWT: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiSnVsaWVuRmluayIsImlhdCI6MTUzMzc3NzQzOH0.KJFzGjs_75Q56mY9QXqpEKU-wE2o3ufF3ZxfIUaexwI
 
-Here is a typical JWT:
+Useful links:
+https://jwt.io/
+https://www.base64url.com/
+https://fr.wikipedia.org/wiki/JSON_Web_Token
 
 * ### Absusing 'none' algorithm
 
