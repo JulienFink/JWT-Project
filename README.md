@@ -8,6 +8,6 @@ Json Web Tokens are
 
 * ### Signature stripping attack
 
-* ### Brute force HS256 secret key
+* ### Brute forcing HS256 secret key
 
 * ### Substitution attack to RS256
