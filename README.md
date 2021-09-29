@@ -3,8 +3,8 @@ Understanding, bypass and securing of Json Web Tokens (JWT)
 
 * ### Prerequisites
 
-* ### Pre-connection attacks
+* ### X
 
-* ### Pre-connection attacks
+* ### XX
 
-* ### Pre-connection attacks
+* ### XXX
