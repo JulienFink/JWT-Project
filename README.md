@@ -38,7 +38,7 @@ What would happen if we decided to change the value of the username to "admin" ?
 eyJ0eXAiOiJKV1QiLCJhbGciOiJub25lIn0.eyJ1c2VybmFtZSI6ImFkbWluIn0.
 <br/> {"typ":"JWT","alg":"none"}.{"username":"admin"}.
 
-To avoid this type of Pr0bl3m, do not use 'none' algorithm.
+To avoid this type of Pr0bL3m, do not use 'none' algorithm.
 
 * ### Signature stripping attack
 
