@@ -10,9 +10,9 @@ A token consists of three parts:
 - A digital signature.
 
 Example:
-Header: {"alg": "HS256", "typ": "JWT"}
-Payload: {"name":"JulienFink", "iat":1533777438}
-Signature: 4V7KzBemrVji_kCyzGO3lQMZlBuVxryF3YhmMIr4kWI (crafted with a secret - "Azerty123" in our case)
+<br/> Header: {"alg": "HS256", "typ": "JWT"}
+<br/> Payload: {"name":"JulienFink", "iat":1533777438}
+<br/> Signature: 4V7KzBemrVji_kCyzGO3lQMZlBuVxryF3YhmMIr4kWI (crafted with a secret - "Azerty123" in our case)
 
 The "header", "payload" and "signature" parts are then encoded using base64url.
 
