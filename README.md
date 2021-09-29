@@ -40,8 +40,7 @@ eyJ0eXAiOiJKV1QiLCJhbGciOiJub25lIn0.eyJ1c2VybmFtZSI6ImFkbWluIn0.
 
 * ### Signature stripping attack
 
-
-![JWT_intro](https://user-images.githubusercontent.com/64968597/135340593-9964d298-be74-4964-bdd0-c8674d383131.JPG)
+![JWT blur](https://user-images.githubusercontent.com/64968597/135341742-d1aae0d8-deaa-4a66-9202-85529e982067.png)
 <br/> https://www.root-me.org/fr/Challenges/Web-Serveur/JSON-Web-Token-JWT-Introduction
 
 * ### Brute forcing HS256 secret key
