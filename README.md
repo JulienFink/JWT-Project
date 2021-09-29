@@ -27,13 +27,13 @@ Useful links for an overall understanding :
 
 * ### Absusing 'none' algorithm
 
-Let us assume you don't have an account on a website, you don't want to create one, and you decide to log in as a guest.
-A JWT is assigned to your "guest" session:
+Let us assume you don't have an account on a website, you don't want to create one and you decide to log in as a guest.
+A JWT is assigned to your newly created session:
 
 eyJ0eXAiOiJKV1QiLCJhbGciOiJub25lIn0.eyJ1c2VybmFtZSI6Imd1ZXN0In0.
 <br/> {"typ":"JWT","alg":"none"}.{"username":"guest"}.
 
-What would happen if we decided to change the value of username to "admin" ? We would get a new valid JWT and thus access the admin section.
+What would happen if we decided to change the value of username to "admin" ? We would get a new valid JWT and thus get access to the admin section.
 
 eyJ0eXAiOiJKV1QiLCJhbGciOiJub25lIn0.eyJ1c2VybmFtZSI6ImFkbWluIn0.
 <br/> {"typ":"JWT","alg":"none"}.{"username":"admin"}.
