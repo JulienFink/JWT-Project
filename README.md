@@ -10,4 +10,4 @@ Json Web Tokens are
 
 * ### Brute forcing HS256 secret key
 
-* ### Substitution attack to RS256
+* ### Substitution attack for RS256 algorithm
