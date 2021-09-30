@@ -16,7 +16,7 @@ Payload : {"name":"JulienFink", "iat":1533777438}
 Signature : 4V7KzBemrVji_kCyzGO3lQMZlBuVxryF3YhmMIr4kWI
 ```
 
-The signature is crafted using a secret - "Azerty123" in our case.
+The signature is crafted using a secret - 'Azerty123' in our case.
 
 The "header", "payload" and "signature" parts are then encoded using base64url.
 
@@ -41,7 +41,7 @@ eyJ0eXAiOiJKV1QiLCJhbGciOiJub25lIn0.eyJ1c2VybmFtZSI6Imd1ZXN0In0.
 {"typ":"JWT","alg":"none"}.{"username":"guest"}.
 ```
 
-What would happen if we decided to change the value of the username to "admin" ? We would get a new valid JWT and thus get access to the admin section.
+What would happen if we decided to change the value of the username to 'admin' ? We would get a new valid JWT and thus get access to the admin section.
 
 ```
 eyJ0eXAiOiJKV1QiLCJhbGciOiJub25lIn0.eyJ1c2VybmFtZSI6ImFkbWluIn0.
@@ -76,11 +76,11 @@ Works !
 - ['none']
 ```
 
-* ## Brute forcing HS256 secret key
+* ## Brute forcing HS256/HS512 secret key
 
-The HS256 algorithm uses a secret value to define the signature like so :
+The HS256/HS512 algorithm uses a secret value to define the signature like so :
 ```
-HMACSHA256(concatenation, 'my_very_secret_key')
+HMACSHA256/512(concatenation, 'my_very_secret_key')
 ```
 
 If the secret key is weak enough, we can brute force it using several tools like 'jwtcrack'.
@@ -90,7 +90,7 @@ eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiZ3Vlc3QifQ.7cKjnSm7ilrnEGAiUEUa
 {"typ": "JWT", "alg": "HS256"}.{"role": "guest"}.'a signature crafted using a secret unknown to us'
 ```
 
-If we try to forge a new JWT without knowing the secret - i.e. replacing the value of role by 'admin' -, we will get an unvalid token.
+If we try to forge a new JWT - i.e. replacing the value of role by 'admin' - without knowing the secret, we will get an invalid token.
 <br/> Brute forcing the token becomes therefore an option to bypass the server filtering :
 
 https://user-images.githubusercontent.com/64968597/135475547-054bada0-1296-42d6-bdfa-9c91487a8726.mp4
