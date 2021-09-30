@@ -82,8 +82,19 @@ The HS256 algorithm uses a secret value to define the signature like so :
 ```
 HMACSHA256(concatenation, 'my_very_secret_key')
 ```
-If the secret key is weak enough, we can brute force it using several tools like 'jwtcrack' :
 
+If the secret key is weak enough, we can brute force it using several tools like 'jwtcrack'.
+<br/> Let's take a closer look at this Json Web Token :
+```
+eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiZ3Vlc3QifQ.7cKjnSm7ilrnEGAiUEUaMMcr7I0_bfydc_ACt1Hk-9E
+{"typ": "JWT", "alg": "HS256"}.{"role": "guest"}.'a signature crafted using a secret unknown to us'
+```
 
+If we try to forge a new JWT without knowing the secret - i.e. replacing the value of role by 'admin' -, we will get an unvalid token.
+<br/> Brute forcing the token becomes therefore an option to bypass the server filtering :
+
+https://user-images.githubusercontent.com/64968597/135475547-054bada0-1296-42d6-bdfa-9c91487a8726.mp4
+
+<br/> 'dictionary.txt' is the famous 'rockyou.txt'.
 
 * ### Substitution attack for RS256 algorithm
