@@ -73,7 +73,7 @@ Works !
 
 ```diff
 + To avoid this type of Pr0bL3m, use a whitelist of allowed algorithms. ['HS256']
-- ['None']
+- ['none']
 ```
 
 * ## Brute forcing HS256 secret key
