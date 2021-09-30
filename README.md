@@ -34,7 +34,7 @@ Useful links for an overall understanding :
 * ### Absusing 'none' algorithm
 
 Let us assume you don't have an account on a website, you don't want to create one and you decide to log in as a guest.
-A JWT is assigned to your newly created session:
+<br/> A JWT is assigned to your newly created session:
 
 ```
 eyJ0eXAiOiJKV1QiLCJhbGciOiJub25lIn0.eyJ1c2VybmFtZSI6Imd1ZXN0In0.
