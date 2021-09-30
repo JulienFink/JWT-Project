@@ -54,7 +54,7 @@ eyJ0eXAiOiJKV1QiLCJhbGciOiJub25lIn0.eyJ1c2VybmFtZSI6ImFkbWluIn0.
 
 * ### Signature stripping attack
 
-What if we decided to change the algorithm to 'none' in the header part in order to exploit the previous vulnerability ? Let us try the following on a Root Me challenge...
+What if we decided to change the algorithm to 'none' in the header part in order to exploit the previous vulnerability ? Let us try on a Root Me challenge (https://www.root-me.org/fr/Challenges/Web-Serveur/JSON-Web-Token-JWT-Introduction).
 
 ```
 eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6Imd1ZXN0In0.OnuZnYMdetcg7AWGV6WURn8CFSfas6AQej4V9M13nsk
@@ -70,7 +70,6 @@ eyJ0eXAiOiJKV1QiLCJhbGciOiJub25lIn0.eyJ1c2VybmFtZSI6ImFkbWluIn0.
 Works !
 
 ![JWT blur](https://user-images.githubusercontent.com/64968597/135341742-d1aae0d8-deaa-4a66-9202-85529e982067.png)
-<br/> https://www.root-me.org/fr/Challenges/Web-Serveur/JSON-Web-Token-JWT-Introduction
 
 ```diff
 + To avoid this type of Pr0bL3m, use a whitelist of allowed algorithms. ['HS256']
