@@ -95,6 +95,13 @@ If we try to forge a new JWT without knowing the secret - i.e. replacing the val
 
 https://user-images.githubusercontent.com/64968597/135475547-054bada0-1296-42d6-bdfa-9c91487a8726.mp4
 
-<br/> 'dictionary.txt' is the famous 'rockyou.txt'.
+The secret value is cracked under a second !
+Since the same secret is used for each and every user, we can now craft our own 'admin' token with the newly discovered secret.
+
+![jwtIO](https://user-images.githubusercontent.com/64968597/135476481-3a00ce9f-5ab4-4dae-bbff-b5a4ca28b0c1.JPG)
+
+```diff
++ To avoid this type of Pr0bL3m, use strong shared secrets.
+```
 
 * ### Substitution attack for RS256 algorithm
