@@ -1,7 +1,7 @@
 # Projet-JWT
 Understanding, bypass and securing of Json Web Tokens (JWT)
 
-* ### Prerequisites
+* ## Prerequisites
 Json Web Tokens allow the secure exchange of tokens between several parties. The security of the exchange translates into the verification of the integrity and authenticity of the data. It is carried out using multiple algorithms.
 
 A token consists of three parts :
@@ -31,7 +31,7 @@ Useful links for an overall understanding :
 <br/> https://jwt.io/
 <br/> https://www.base64url.com/
 
-* ### Absusing 'none' algorithm
+* ## Absusing 'none' algorithm
 
 Let us assume you don't have an account on a website, you don't want to create one and you decide to log in as a guest.
 <br/> A JWT is assigned to your newly created session:
@@ -52,7 +52,7 @@ eyJ0eXAiOiJKV1QiLCJhbGciOiJub25lIn0.eyJ1c2VybmFtZSI6ImFkbWluIn0.
 + To avoid this type of Pr0bL3m, do not use 'none' algorithm.
 ```
 
-* ### Signature stripping attack
+* ## Signature stripping attack
 
 What if we decided to change the algorithm to 'none' in the header part in order to exploit the previous vulnerability ? Let us try on a Root Me challenge (https://www.root-me.org/fr/Challenges/Web-Serveur/JSON-Web-Token-JWT-Introduction).
 
@@ -76,7 +76,7 @@ Works !
 - ['None']
 ```
 
-* ### Brute forcing HS256 secret key
+* ## Brute forcing HS256 secret key
 
 The HS256 algorithm uses a secret value to define the signature like so :
 ```
@@ -104,6 +104,6 @@ Since the same secret is used for each and every user, we can now craft our own 
 + To avoid this type of Pr0bL3m, use strong shared secrets.
 ```
 
-* ### Substitution attack for RS256 algorithm
+* ## Substitution attack for RS256 algorithm
 
 -- Coming soon !
