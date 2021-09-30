@@ -4,14 +4,6 @@ Understanding, bypass and securing of Json Web Tokens (JWT)
 * ### Prerequisites
 Json Web Tokens allow the secure exchange of tokens between several parties. The security of the exchange translates into the verification of the integrity and authenticity of the data. It is carried out using multiple algorithms.
 
-```diff
-- text in red
-+ text in green
-! text in orange
-# text in gray
-@@ text in purple (and bold)@@
-```
-
 A token consists of three parts :
 - A header, used to describe the token.
 - A payload, which represents the information embedded in the token.
