@@ -73,8 +73,7 @@ Works !
 <br/> https://www.root-me.org/fr/Challenges/Web-Serveur/JSON-Web-Token-JWT-Introduction
 
 ```diff
-+ To avoid this type of Pr0bL3m, use a whitelist of allowed algorithms.
-+ ['HS256']
++ To avoid this type of Pr0bL3m, use a whitelist of allowed algorithms. ['HS256']
 - ['None']
 ```
 
