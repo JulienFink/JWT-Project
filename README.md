@@ -27,11 +27,9 @@ eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiSnVsaWVuRmluayIsImlhdCI6MTUzMzc
 ```
 
 Useful links for an overall understanding :
-```
-https://fr.wikipedia.org/wiki/JSON_Web_Token
-https://jwt.io/
-https://www.base64url.com/
-```
+<br/> https://fr.wikipedia.org/wiki/JSON_Web_Token
+<br/> https://jwt.io/
+<br/> https://www.base64url.com/
 
 * ## Absusing 'none' algorithm
 
