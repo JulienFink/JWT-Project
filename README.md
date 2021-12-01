@@ -106,4 +106,4 @@ Since the same secret is used for each and every user, we can now craft our own 
 
 * ## Substitution attack for RS256 algorithm
 
--- Coming soon !
+-- Coming soon ! 
