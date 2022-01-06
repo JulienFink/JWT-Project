@@ -1,4 +1,4 @@
-# Projet-JWT
+# JWT-Project
 Understanding, bypass and securing of Json Web Tokens (JWT)
 
 * ## Prerequisites
