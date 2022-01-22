@@ -31,7 +31,7 @@ Useful links for an overall understanding :
 <br/> https://jwt.io/
 <br/> https://www.base64url.com/
 
-* ## Absusing 'none' algorithm
+* ## Abusing 'none' algorithm
 
 Let us assume you don't have an account on a website, you don't want to create one and you decide to log in as a guest.
 <br/> A JWT is assigned to your newly created session:
